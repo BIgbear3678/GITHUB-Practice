@@ -1,0 +1,25 @@
+name: Improved Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Show current date
+        run: date
+
+      - name: List repository files
+        run: ls -R
+
+      - name: Print custom message
+        run: echo "Workflow improved and running successfully for Sione!"
+
